@@ -19,8 +19,7 @@ Make sure that you have the following installed:
  `npm install`
 
  `npm start`
- 
- <!-- Windows PowerShell
+ <!--Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Try the new cross-platform PowerShell https://aka.ms/pscore6
@@ -68,6 +67,6 @@ PS C:\Users\To\Desktop\yolo\backend> npm start
 > node server.js
 
 Server listening on port 5000
-Database connected successfully -->
+Database connected successfully-->
 
  ### Go ahead a nd add a product (note that the price field only takes a numeric input)
