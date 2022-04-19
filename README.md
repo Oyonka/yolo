@@ -19,5 +19,4 @@ Make sure that you have the following installed:
  `npm install`
 
  `npm start`
-
  ### Go ahead a nd add a product (note that the price field only takes a numeric input)
