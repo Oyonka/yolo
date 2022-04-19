@@ -21,9 +21,7 @@ Make sure that you have the following installed:
  `npm start`
  <!--Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
-
 Try the new cross-platform PowerShell https://aka.ms/pscore6
-
 PS C:\Users\To\Desktop\yolo> cd ../backend
 cd : Cannot find path 'C:\Users\To\Desktop\backend' because it does not exist.
 At line:1 char:1
@@ -32,8 +30,7 @@ At line:1 char:1
     + CategoryInfo          : ObjectNotFound: (C:\Users\To\Desktop\backend:Strin 
    g) [Set-Location], ItemNotFoundException
     + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoca 
-   tionCommand
- 
+   tionCommand 
 PS C:\Users\To\Desktop\yolo> cd backend
 PS C:\Users\To\Desktop\yolo\backend> npm install
 npm WARN old lockfile
@@ -42,30 +39,20 @@ npm WARN old lockfile so supplemental metadata must be fetched from the registry
 npm WARN old lockfile
 npm WARN old lockfile This is a one-time fix-up, please be patient...
 npm WARN old lockfile
-
 added 150 packages, and audited 151 packages in 45s
-
   run `npm fund` for details
-
 10 vulnerabilities (4 moderate, 3 high, 3 critical)
-
 To address all issues, run:
   npm audit fix
-
 Run `npm audit` for details.
 PS C:\Users\To\Desktop\yolo\backend> npm audit fix
-
 added 6 packages, removed 2 packages, changed 15 packages, and audited 155 packages in 12s
-
 5 packages are looking for funding
   run `npm fund` for details
-
 found 0 vulnerabilities
 PS C:\Users\To\Desktop\yolo\backend> npm start
-
 > yolo_app@1.0.0 start
 > node server.js
-
 Server listening on port 5000
 Database connected successfully-->
 
