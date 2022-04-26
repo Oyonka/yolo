@@ -1,13 +1,19 @@
-FROM node: 12.alphine
+FROM node:12-alpine
 
-RUN mkdir -p /app
+#Set the working directory
+WORKDIR /client
 
-WORKDIR /app
+#copy package.json files to working directory
+COPY package*.json /client/
 
-COPY packaje*.json /app/
+#Install dependencies
+RUN npm install
 
-RUN npm i
+#copy all files to the container at /client
+COPY . /client/
 
-COPY . /app/
+#Make port 3000 available outside the container for react
+EXPOSE 3000
 
-CMD:  [*npm*.*start*]
+#Run app when container launches
+CMD ["npm", "start"]

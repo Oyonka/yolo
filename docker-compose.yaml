@@ -1,19 +1,37 @@
 Version: '3.6'
-Services:
-backend-server:
-  container_name: backend-server
-  build:
-  context: backend
-  dockefile: backend
-  ports: 
-  .5000:5000
-  environment:
-  PORT:5000
-  MONGODB_URL: 'monngodb://host.docker.internal/';
-  image: mongo
-  ports:
-  .27017:27017
-  volumes:
-  . database:/data/db
+services:
+    client:
+        container_name: yoloclient
+        build: ./client
+        image: yoloclient:version1
+        ports:
+            - "5000:5000"
+        depends_on:
+            - backend
+        networks:
+            - yoloappnetwork
+    backend:
+        container_name: backend
+        build: ./backend
+        image: backend:version1
+        ports:
+            - "5000:5000"
+        depends_on:
+            - mongodb
+        networks:
+            - yoloappnetwork
+    mongodb:
+        image: mongo
+        restart: always
+        container_name: mongodb
+        volumes:
+            - ./datadir:/data/db
+        ports:
+            - 27017:27017
+        networks:
+            - yoloappnetwork
+networks:
+    yoloappnetwork:
+        driver: bridge
 
 
